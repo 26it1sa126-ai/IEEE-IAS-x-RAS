@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEEE InnovateX 2026 | Premier Student Technical Conference</title>
+  <meta name="description" content="IEEE InnovateX 2026 is a flagship technical conference organized with IEEE Technical Societies (IAS & RAS). Join innovators, engineers, students, and technology enthusiasts for a day of ideas, innovation, and emerging technology.">
+  <meta name="keywords" content="IEEE, InnovateX 2026, Student Conference, IAS, RAS, Artificial Intelligence, Robotics, Emerging Technology">
+  <meta name="author" content="IEEE Student Branch">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IEEE InnovateX 2026 — INNOVATE. CONNECT. CREATE.">
+  <meta property="og:description" content="Join innovators, engineers, students, and technology enthusiasts for a day of ideas, innovation, and emerging technology.">
+  <meta property="og:image" content="assets/footer-banner.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/ias-logo.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Background Glowing Orbs -->
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="bg-orb orb-3" aria-hidden="true"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar-wrapper" id="navbar-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="IEEE InnovateX 2026 Home">
+        <div class="brand-emblem">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">IEEE INNOVATEX</span>
+          <span class="brand-year">2026</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#societies" class="nav-link">Societies</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#speakers" class="nav-link">Speakers</a></li>
+        <li><a href="#benefits" class="nav-link">Why Attend</a></li>
+        <li class="nav-cta-item">
+          <a href="#register" class="btn btn-primary nav-register-btn" id="nav-register-btn">Register Now</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-badge-wrapper">
+          <span class="hero-pill-badge">
+            <span class="pill-dot"></span>
+            IEEE Student Technical Symposium &bull; Oct 2026
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-prefix">IEEE</span>
+          <span class="gradient-text">INNOVATEX 2026</span>
+        </h1>
+
+        <p class="hero-tagline">“INNOVATE. CONNECT. CREATE.”</p>
+
+        <p class="hero-description">
+          Join innovators, engineers, students, and technology enthusiasts for a day of ideas, innovation, and emerging technology.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#register" class="btn btn-primary btn-hero-cta" id="hero-register-btn">
+            <span>Register Now</span>
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="#schedule" class="btn btn-secondary btn-hero-secondary">
+            <span>View Schedule</span>
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Live Event Countdown -->
+        <div class="countdown-card" id="countdown-card" aria-label="Event Countdown">
+          <div class="countdown-header">
+            <span class="countdown-icon">⏳</span>
+            <span class="countdown-label">COUNTDOWN TO CONCLAVE</span>
+          </div>
+          <div class="countdown-grid">
+            <div class="countdown-unit">
+              <span class="countdown-num" id="days-val">18</span>
+              <span class="countdown-sub">DAYS</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="hours-val">06</span>
+              <span class="countdown-sub">HOURS</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="minutes-val">42</span>
+              <span class="countdown-sub">MINS</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="seconds-val">15</span>
+              <span class="countdown-sub">SECS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats Ribbon -->
+        <div class="hero-stats-ribbon">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Student Innovators</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Core Sessions</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Distinguished Keynotes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">IEEE Societies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. IEEE / IAS / RAS BRANDING SECTION -->
+    <section class="societies-section" id="societies" aria-labelledby="societies-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">COLLABORATIVE PARTNERSHIP</span>
+          <h2 class="section-title" id="societies-title">Organized with IEEE Technical Societies</h2>
+          <p class="section-subtitle">
+            Uniting global engineering excellence through premier societies dedicated to industrial innovation and robotic automation.
+          </p>
+        </div>
+
+        <div class="societies-grid">
+          <!-- IEEE Primary Logo Card -->
+          <div class="society-card">
+            <div class="society-logo-wrapper">
+              <img src="assets/ieee-logo.jpg" alt="IEEE - Institute of Electrical and Electronics Engineers" class="society-logo-img" loading="lazy">
+            </div>
+            <div class="society-info">
+              <h3 class="society-name">IEEE</h3>
+              <p class="society-role">Institute of Electrical and Electronics Engineers</p>
+              <span class="society-tag">Parent Global Organization</span>
+            </div>
+          </div>
+
+          <!-- IAS Logo Card -->
+          <div class="society-card">
+            <div class="society-logo-wrapper logo-invert-clean">
+              <img src="assets/ias-logo.png" alt="IEEE Industry Applications Society (IAS)" class="society-logo-img" loading="lazy">
+            </div>
+            <div class="society-info">
+              <h3 class="society-name">IEEE IAS</h3>
+              <p class="society-role">Industry Applications Society</p>
+              <span class="society-tag">Industrial Technology & Applications</span>
+            </div>
+          </div>
+
+          <!-- RAS Logo Card -->
+          <div class="society-card">
+            <div class="society-logo-wrapper">
+              <img src="assets/ras-logo.jpg" alt="IEEE Robotics and Automation Society (RAS)" class="society-logo-img" loading="lazy">
+            </div>
+            <div class="society-info">
+              <h3 class="society-name">IEEE RAS</h3>
+              <p class="society-role">Robotics and Automation Society</p>
+              <span class="society-tag">Robotics, Autonomy & Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT THE EVENT -->
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">WELCOME TO INNOVATEX</span>
+          <h2 class="section-title" id="about-title">About the Event</h2>
+          <p class="about-lead-text">
+            “IEEE InnovateX 2026 is a technical innovation event designed to bring together students, aspiring engineers, researchers, and technology enthusiasts. The event provides an opportunity to explore emerging technologies, exchange ideas, learn from industry experts, and build meaningful connections.”
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards: Innovation, Networking, Learning -->
+        <div class="features-grid">
+          <!-- Card 1: Innovation -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-innovation">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="6" x2="12" y2="12"></line>
+                <line x1="12" y1="12" x2="16" y2="14"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Innovation</h3>
+            <p class="feature-desc">
+              Immerse yourself in live demonstrations, cutting-edge engineering prototypes, and disruptive technical architectures that are redefining real-world industries.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-highlight">&bull; Emerging Tech &bull; Prototype Showcase</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Networking -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-networking">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Networking</h3>
+            <p class="feature-desc">
+              Forge valuable partnerships with IEEE professionals, peer researchers, and industry specialists. Build connections that spark future projects and career opportunities.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-highlight">&bull; Peer Synergy &bull; Faculty Mentorship</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Learning -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-learning">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <line x1="9" y1="7" x2="15" y2="7"></line>
+                <line x1="9" y1="11" x2="15" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Learning</h3>
+            <p class="feature-desc">
+              Gain deep technical perspective from visionary keynote speakers. Translate theoretical concepts into pragmatic engineering problem-solving approaches.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-highlight">&bull; Expert Keynotes &bull; Tech Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EVENT SCHEDULE -->
+    <section class="schedule-section" id="schedule" aria-labelledby="schedule-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">CONFERENCE TIMELINE</span>
+          <h2 class="section-title" id="schedule-title">Event Schedule</h2>
+          <p class="section-subtitle">
+            A comprehensive, high-impact schedule designed for maximum insight, dialogue, and collaborative engagement.
+          </p>
+        </div>
+
+        <!-- Schedule Timeline Layout -->
+        <div class="timeline-container">
+          <div class="timeline-track-line" aria-hidden="true"></div>
+
+          <!-- Event 1: 09:00 AM -->
+          <div class="timeline-item">
+            <div class="timeline-time-badge">
+              <span class="time-main">09:00 AM</span>
+              <span class="time-zone">IST</span>
+            </div>
+            <div class="timeline-node" aria-hidden="true">
+              <div class="node-inner"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-header">
+                <span class="event-category-badge category-welcome">REGISTRATION</span>
+                <span class="event-duration">60 Mins</span>
+              </div>
+              <h3 class="event-title">Registration &amp; Welcome</h3>
+              <p class="event-description">
+                Attendee check-in, distribution of official IEEE InnovateX delegate kits, networking breakfast, and interactive demonstration booth walkthrough.
+              </p>
+              <div class="event-meta">
+                <span class="meta-item"><span class="meta-icon">📍</span> Main Concourse &amp; Foyer</span>
+                <span class="meta-item"><span class="meta-icon">☕</span> Welcome Refreshments</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: 10:00 AM -->
+          <div class="timeline-item">
+            <div class="timeline-time-badge">
+              <span class="time-main">10:00 AM</span>
+              <span class="time-zone">IST</span>
+            </div>
+            <div class="timeline-node" aria-hidden="true">
+              <div class="node-inner"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-header">
+                <span class="event-category-badge category-ceremony">CEREMONY</span>
+                <span class="event-duration">60 Mins</span>
+              </div>
+              <h3 class="event-title">Opening Ceremony</h3>
+              <p class="event-description">
+                Official ceremonial inauguration featuring opening addresses by IEEE Student Branch leaders, Faculty Advisors, and technical society representatives from IAS &amp; RAS.
+              </p>
+              <div class="event-meta">
+                <span class="meta-item"><span class="meta-icon">📍</span> Grand Tech Auditorium</span>
+                <span class="meta-item"><span class="meta-icon">🎙️</span> Presidential Address</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: 11:00 AM -->
+          <div class="timeline-item active-highlight">
+            <div class="timeline-time-badge">
+              <span class="time-main">11:00 AM</span>
+              <span class="time-zone">IST</span>
+            </div>
+            <div class="timeline-node" aria-hidden="true">
+              <div class="node-inner"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-header">
+                <span class="event-category-badge category-keynote">KEYNOTE SESSIONS</span>
+                <span class="event-duration">120 Mins</span>
+              </div>
+              <h3 class="event-title">Keynote Session</h3>
+              <p class="event-description">
+                Two flagship keynote addresses exploring cognitive AI architectures, emerging technologies, and navigating the product journey from initial ideation to real-world deployment.
+              </p>
+              <div class="event-meta">
+                <span class="meta-item"><span class="meta-icon">📍</span> Grand Tech Auditorium</span>
+                <span class="meta-item"><span class="meta-icon">⭐</span> Featuring Dr. Aarav Sharma &amp; Ms. Ananya Mehta</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4: 02:00 PM -->
+          <div class="timeline-item">
+            <div class="timeline-time-badge">
+              <span class="time-main">02:00 PM</span>
+              <span class="time-zone">IST</span>
+            </div>
+            <div class="timeline-node" aria-hidden="true">
+              <div class="node-inner"></div>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-header">
+                <span class="event-category-badge category-network">INNOVATION &amp; NETWORKING</span>
+                <span class="event-duration">120 Mins</span>
+              </div>
+              <h3 class="event-title">Innovation &amp; Networking Session</h3>
+              <p class="event-description">
+                Interactive project showcases, round-table discussions with industry mentors, collaborative student ideation breakout circles, and closing valedictory felicitation.
+              </p>
+              <div class="event-meta">
+                <span class="meta-item"><span class="meta-icon">📍</span> Innovation Hub &amp; Exhibition Hall</span>
+                <span class="meta-item"><span class="meta-icon">🏆</span> Project Recognitions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. KEYNOTE SPEAKERS -->
+    <section class="speakers-section" id="speakers" aria-labelledby="speakers-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">LEADERSHIP &amp; EXPERTISE</span>
+          <h2 class="section-title" id="speakers-title">Keynote Speakers</h2>
+          <p class="section-subtitle">
+            Visionary leaders at the vanguard of artificial intelligence research and venture technology product scaling.
+          </p>
+          <div class="speakers-disclaimer">
+            <span class="disclaimer-badge">*Speaker profiles are illustrative keynote placeholders for IEEE InnovateX 2026.</span>
+          </div>
+        </div>
+
+        <!-- Exactly 2 Keynote Speaker Cards -->
+        <div class="speakers-grid">
+          <!-- Speaker 1: Dr. Aarav Sharma -->
+          <div class="speaker-card" id="speaker-card-1">
+            <div class="speaker-img-wrapper">
+              <img src="assets/speaker-aarav.jpg" alt="Dr. Aarav Sharma - Technology Researcher" class="speaker-img" loading="lazy">
+              <div class="speaker-badge-overlay">Keynote Speaker 1</div>
+            </div>
+            <div class="speaker-body">
+              <div class="speaker-meta-top">
+                <span class="speaker-role-pill">Technology Researcher</span>
+                <span class="speaker-society-tag">AI &amp; Systems</span>
+              </div>
+              <h3 class="speaker-name">Dr. Aarav Sharma</h3>
+              <p class="speaker-role">Technology Researcher</p>
+              <div class="speaker-keynote-topic">
+                <span class="topic-label">Keynote Address:</span>
+                <h4 class="topic-quote">“Exploring the Future of AI &amp; Emerging Technologies”</h4>
+              </div>
+              <p class="speaker-desc">
+                Specializing in cognitive algorithms, edge computing, and autonomous decision systems, Dr. Sharma examines the transformative potential of next-generation AI architectures across industry and academia.
+              </p>
+              <div class="speaker-tags">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Edge Computing</span>
+                <span class="tag">Autonomous Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 2: Ms. Ananya Mehta -->
+          <div class="speaker-card" id="speaker-card-2">
+            <div class="speaker-img-wrapper">
+              <img src="assets/speaker-ananya.jpg" alt="Ms. Ananya Mehta - Innovation & Product Strategist" class="speaker-img" loading="lazy">
+              <div class="speaker-badge-overlay">Keynote Speaker 2</div>
+            </div>
+            <div class="speaker-body">
+              <div class="speaker-meta-top">
+                <span class="speaker-role-pill">Innovation &amp; Product Strategist</span>
+                <span class="speaker-society-tag">Strategy &amp; Scale</span>
+              </div>
+              <h3 class="speaker-name">Ms. Ananya Mehta</h3>
+              <p class="speaker-role">Innovation &amp; Product Strategist</p>
+              <div class="speaker-keynote-topic">
+                <span class="topic-label">Keynote Address:</span>
+                <h4 class="topic-quote">“From Ideas to Real-World Innovation”</h4>
+              </div>
+              <p class="speaker-desc">
+                A strategic leader in venture development and tech product lifecycle management, Ms. Mehta empowers student engineers with actionable frameworks to transition concepts from lab prototypes into scalable solutions.
+              </p>
+              <div class="speaker-tags">
+                <span class="tag">Product Strategy</span>
+                <span class="tag">Venture Scaling</span>
+                <span class="tag">Design Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHY ATTEND SECTION -->
+    <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">VALUE PROPOSITION</span>
+          <h2 class="section-title" id="benefits-title">Why Attend InnovateX 2026?</h2>
+          <p class="section-subtitle">
+            Immerse yourself in an inspiring environment designed to accelerate your technical skills, expand your horizons, and elevate your professional network.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <!-- Benefit 1: Learn from Experts -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Learn from Experts</h3>
+            <p class="benefit-desc">
+              Acquire first-hand insights directly from distinguished researchers and industry practitioners shaping the trajectory of modern engineering.
+            </p>
+          </div>
+
+          <!-- Benefit 2: Explore Emerging Technology -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Explore Emerging Technology</h3>
+            <p class="benefit-desc">
+              Interact with state-of-the-art developments across artificial intelligence, autonomous robotics, edge hardware, and next-generation software systems.
+            </p>
+          </div>
+
+          <!-- Benefit 3: Network with Innovators -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Network with Innovators</h3>
+            <p class="benefit-desc">
+              Connect with ambitious students, researchers, and professional members from IEEE student branches across regional and national chapters.
+            </p>
+          </div>
+
+          <!-- Benefit 4: Showcase Your Ideas -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Showcase Your Ideas</h3>
+            <p class="benefit-desc">
+              Present your research ideas, exchange constructive feedback, and discover multidisciplinary collaboration opportunities for upcoming technical competitions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. REGISTRATION CTA -->
+    <section class="cta-section" id="register" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-glow-element" aria-hidden="true"></div>
+          <div class="cta-content text-center">
+            <span class="cta-tag">LIMITED SEATS AVAILABLE &bull; COMPLIMENTARY DELEGATE REGISTRATION</span>
+            <h2 class="cta-title" id="cta-title">Ready to Innovate?</h2>
+            <p class="cta-desc">
+              “Be part of IEEE InnovateX 2026 and turn your ideas into impact.”
+            </p>
+
+            <!-- Quick Registration Action -->
+            <div class="cta-actions">
+              <button class="btn btn-primary btn-large btn-register-trigger" id="open-register-modal-btn">
+                <span>Register Now</span>
+                <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Quick Registration Form Inline Option -->
+            <div class="quick-register-wrapper">
+              <div class="quick-register-card">
+                <h3 class="quick-reg-title">Instant Registration Portal</h3>
+                <p class="quick-reg-sub">Fill in your details below to secure your delegate pass immediately.</p>
+                <form id="inline-register-form" class="inline-form" novalidate>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="reg-name">Full Name <span class="req">*</span></label>
+                      <input type="text" id="reg-name" name="fullName" placeholder="e.g. Sarthak Jaiswal" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="reg-email">Email Address <span class="req">*</span></label>
+                      <input type="email" id="reg-email" name="email" placeholder="name@domain.edu" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="reg-institution">College / University <span class="req">*</span></label>
+                      <input type="text" id="reg-institution" name="institution" placeholder="e.g. National Institute of Technology" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="reg-tier">Delegate Category <span class="req">*</span></label>
+                      <select id="reg-tier" name="tier" required>
+                        <option value="student">Student Delegate (Complimentary)</option>
+                        <option value="ieee-member">IEEE Member Delegate (Priority Pass)</option>
+                        <option value="researcher">Researcher / Faculty Attendee</option>
+                        <option value="virtual">Virtual Conclave Stream Pass</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-ieee-id">IEEE Membership ID (Optional)</label>
+                    <input type="text" id="reg-ieee-id" name="ieeeId" placeholder="e.g. 98451234 (Optional)">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-submit-reg" id="submit-reg-btn">
+                    <span>Confirm &amp; Generate Delegate Pass</span>
+                  </button>
+                </form>
+
+                <!-- Success Confirmation Message -->
+                <div class="reg-success-message" id="reg-success-box" style="display: none;">
+                  <div class="success-icon">🎉</div>
+                  <h4 class="success-title">Registration Confirmed!</h4>
+                  <p class="success-text" id="success-message-text">
+                    Thank you! Your delegate badge for IEEE InnovateX 2026 has been generated. A confirmation dispatch has been sent to your email.
+                  </p>
+                  <div class="badge-receipt" id="badge-receipt">
+                    <div class="badge-receipt-header">
+                      <span>DELEGATE PASS #IX26-</span><span id="pass-code">8492</span>
+                    </div>
+                    <div class="badge-receipt-body">
+                      <p><strong>Delegate:</strong> <span id="pass-name">-</span></p>
+                      <p><strong>Tier:</strong> <span id="pass-tier">Student Delegate</span></p>
+                      <p><strong>Access:</strong> All Keynotes &amp; Networking Breakouts</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perks Bar -->
+            <div class="cta-perks">
+              <span class="perk-item"><span class="check-icon">✓</span> Official Participation Certificate</span>
+              <span class="perk-item"><span class="check-icon">✓</span> IEEE Delegate Welcome Kit</span>
+              <span class="perk-item"><span class="check-icon">✓</span> Keynote Q&amp;A Access</span>
+              <span class="perk-item"><span class="check-icon">✓</span> Networking Session Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer-wrapper" id="site-footer">
+    <!-- Provided Footer Image Banner -->
+    <div class="container footer-banner-container">
+      <div class="footer-image-frame">
+        <img src="assets/footer-banner.jpg" alt="IEEE InnovateX 2026 Event Banner" class="footer-banner-img" loading="lazy">
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand & Description -->
+          <div class="footer-col brand-col">
+            <div class="footer-brand">
+              <div class="brand-emblem mini">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="footer-title">IEEE InnovateX 2026</span>
+            </div>
+            <p class="footer-desc">
+              A flagship premier technical conference organized with IEEE Technical Societies (IAS &amp; RAS) to foster curiosity, connection, and real-world engineering impact.
+            </p>
+            <div class="footer-societies-branding">
+              <span class="brand-subtext">Co-organized with:</span>
+              <div class="society-mini-badges">
+                <span class="mini-badge">IEEE</span>
+                <span class="mini-badge">IEEE IAS</span>
+                <span class="mini-badge">IEEE RAS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About the Event</a></li>
+              <li><a href="#societies">Technical Societies</a></li>
+              <li><a href="#schedule">Event Schedule</a></li>
+              <li><a href="#speakers">Keynote Speakers</a></li>
+              <li><a href="#benefits">Why Attend</a></li>
+              <li><a href="#register">Register</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Technical Focus -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Focus Domains</h4>
+            <ul class="footer-links">
+              <li><a href="#about">Artificial Intelligence &amp; ML</a></li>
+              <li><a href="#about">Industrial Robotics &amp; Autonomy</a></li>
+              <li><a href="#about">Applied Systems Engineering</a></li>
+              <li><a href="#about">Venture Prototype Scaling</a></li>
+              <li><a href="#about">Student Research Mentorship</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact Placeholder -->
+          <div class="footer-col contact-col">
+            <h4 class="footer-heading">Contact &amp; Venue</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <span class="contact-icon">📍</span>
+                <span>Grand Tech Hub &amp; Auditorium<br>Main University Campus</span>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <a href="mailto:innovatex2026@ieee-sb.edu">innovatex2026@ieee-sb.edu</a>
+              </li>
+              <li>
+                <span class="contact-icon">📞</span>
+                <span>+1 (800) 555-IEEE-IX</span>
+              </li>
+            </ul>
+            <div class="footer-social-links">
+              <a href="#" class="social-link" aria-label="IEEE Student Branch on LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74Z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="IEEE Student Branch on GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="IEEE Student Branch on Twitter / X">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            Copyright &copy; 2026 IEEE InnovateX. All rights reserved. Organized by IEEE Student Branch.
+          </div>
+          <div class="footer-legal-links">
+            <a href="#">IEEE Code of Conduct</a>
+            <span class="sep">&bull;</span>
+            <a href="#">Privacy Policy</a>
+            <span class="sep">&bull;</span>
+            <a href="#">Terms of Participation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
