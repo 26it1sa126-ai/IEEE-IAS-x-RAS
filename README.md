@@ -1,6 +1,7 @@
 # IEEE InnovateX 2026 — Official Event Website
 
-[![Live Deployment](https://img.shields.io/badge/Deployment-Live-brightgreen?style=flat-square)](https://ieee-innovatex-2026.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-IEEE--IAS--x--RAS-blue?logo=github&style=flat-square)](https://github.com/26it1sa126-ai/IEEE-IAS-x-RAS)
+[![Live Deployment](https://img.shields.io/badge/Live%20Website-GitHub%20Pages-brightgreen?style=flat-square)](https://26it1sa126-ai.github.io/IEEE-IAS-x-RAS/)
 [![IEEE Societies](https://img.shields.io/badge/Societies-IEEE%20%7C%20IAS%20%7C%20RAS-blue?style=flat-square)](https://ias.ieee.org)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=flat-square)](#)
 
